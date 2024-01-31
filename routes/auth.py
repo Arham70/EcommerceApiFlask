@@ -49,7 +49,7 @@ def logout():
     return jsonify({'message': 'Logged out successfully'})
 
 
-@auth_bp.route('/login1', methods=['GET', 'POST'])
+@auth_bp.route('/', methods=['GET', 'POST'])
 def login1():
     if request.method == 'POST':
         username = request.form['username']

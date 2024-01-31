@@ -49,7 +49,7 @@ def delete_cart_item(cart_item_id):
     return jsonify({'message': 'Cart item deleted successfully'})
 
 
-@cart_item_bp.route('/')
+@cart_item_bp.route('/index')
 @login_required
 def index():
     cart_items = CartItem.query.filter_by(user_id=current_user.id).all()
